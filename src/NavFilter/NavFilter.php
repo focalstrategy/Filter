@@ -6,7 +6,7 @@ use FocalStrategy\Core\Renderable;
 use FocalStrategy\Filter\FilterManager;
 use View;
 
-class NavFilterComponent implements Renderable
+class NavFilter implements Renderable
 {
     protected $filter;
     protected $callable;
@@ -24,7 +24,7 @@ class NavFilterComponent implements Renderable
 
     public function dropdown($field, $display, $data, string $group = 'main', array $options = [])
     {
-        $dd = new NavFilterDropdownComponent($this->filter, $field, $display, $data, $options);
+        $dd = new NavFilterDropdown($this->filter, $field, $display, $data, $options);
 
         if (!isset($this->components[$group])) {
             $this->components[$group] = [];
@@ -37,7 +37,7 @@ class NavFilterComponent implements Renderable
 
     public function tab($field, $value, $display, $route = null, string $group = 'main', array $options = [])
     {
-        $dd = new NavFilterTabComponent($this->filter, $field, $value, $display, $route, $options);
+        $dd = new NavFilterTab($this->filter, $field, $value, $display, $route, $options);
 
         if (!isset($this->components[$group])) {
             $this->components[$group] = [];
@@ -50,7 +50,7 @@ class NavFilterComponent implements Renderable
 
     public function enumDropdown($field, $display, $data, string $group = 'main')
     {
-        $dd = new NavFilterEnumDropdownComponent($this->filter, $field, $display, $data);
+        $dd = new NavFilterEnumDropdown($this->filter, $field, $display, $data);
 
         if (!isset($this->components[$group])) {
             $this->components[$group] = [];

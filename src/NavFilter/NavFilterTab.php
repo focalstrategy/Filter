@@ -8,7 +8,7 @@ use FocalStrategy\Filter\FilterManager;
 use Route;
 use View;
 
-class NavFilterTabComponent implements Renderable
+class NavFilterTab implements Renderable
 {
     protected $filter;
     protected $field;
