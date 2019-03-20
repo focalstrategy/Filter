@@ -9,7 +9,7 @@
         }
     ],
     "require": {
-        "focalstrategy/core":"^0.6"
+        "focalstrategy/core":"^1.0"
     },
     "repositories": [
         {
