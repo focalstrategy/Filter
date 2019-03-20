@@ -1,0 +1,30 @@
+{
+    "name": "focalstrategy/filter",
+    "description": "Navigation with persistant filters (Filter Manager)",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Shane Glee",
+            "email": "shane@focalstrategy.com"
+        }
+    ],
+    "require": {
+        "focalstrategy/core":"^0.6"
+    },
+    "repositories": [
+        {
+            "url": "https://github.com/richbradshaw/Core.git",
+            "type": "vcs"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+          "FocalStrategy\\Filter\\": "src"
+        }
+    },
+    "config": {
+        "github-oauth": {
+            "github.com": "af8e077799a15b74a85ebe9c126db26b87fe69df"
+        }
+    }
+}
