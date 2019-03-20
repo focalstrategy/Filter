@@ -1,6 +1,6 @@
 <?php
 
-namespace FocalStrategy\Filter\NavFilter;
+namespace FocalStrategy\Filter\Components;
 
 use Exception;
 use FocalStrategy\Core\Renderable;
