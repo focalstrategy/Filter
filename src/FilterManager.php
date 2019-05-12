@@ -11,12 +11,16 @@ class FilterManager
 
     public function __construct(Request $req)
     {
-        if ($req->route() != null) {
-            $this->params_holder = collect($req->route()->parameters() + $req->query());
+        if (method_exists($req, 'route')) {
+            if ($req->route() != null) {
+                $this->params_holder = collect($req->route()->parameters() + $req->query());
+            } else {
+                $this->params_holder = collect([]);
+            }
         } else {
-            $this->params_holder = collect([]);
+            $this->params_holder = collect($req->input());
         }
-
+        
         $this->query_params = $req->query();
     }
 
